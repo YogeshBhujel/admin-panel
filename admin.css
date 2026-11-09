@@ -142,7 +142,7 @@ legend{font-size:13.5px;font-weight:500;padding:0 6px}
 .dl{display:grid;grid-template-columns:130px minmax(0,1fr);gap:6px 14px;font-size:14px}
 .dl dt{color:var(--mute)}
 .dl dd{overflow-wrap:anywhere}
-.slide{border:1px solid var(--line);border-radius:var(--r);padding:14px;display:grid;gap:10px;background:var(--surface)}
+.slide{border:1px solid var(--line);border-radius:var(--r);padding:14px;display:grid;grid-template-columns:minmax(0,1fr);gap:10px;background:var(--surface);min-width:0}
 .slide+.slide{margin-top:12px}
 .slide h3{font-size:20px;display:flex;justify-content:space-between;align-items:center}
 .msg{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px}
@@ -235,6 +235,8 @@ td select.st{min-height:40px;font-size:15px}
 .row .chk{flex-wrap:wrap;align-items:flex-start;flex-direction:column;gap:6px}
 .mbox small{overflow-wrap:anywhere}
 .slide h3{font-size:18px}
+.slide .chk{flex-wrap:wrap;align-items:flex-start;flex-direction:column;gap:6px}
+.slide input[type=file]{width:100%}
 .chart{gap:3px}.chart div{font-size:10px}
 .kpi{padding:14px}.kpi b{font-size:28px}
 .lbox{padding:26px 22px}
