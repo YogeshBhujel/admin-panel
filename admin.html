@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1F3D36">
+<title>Maison Tempo – Admin</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F3D36'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='white'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+
+<div class="login" id="login">
+<form class="lbox" id="lf" autocomplete="on">
+<div class="lbrand">MAISON TEMPO</div>
+<h1>Admin sign in</h1>
+<label>Username<input id="lu" name="username" autocomplete="username" required autofocus></label>
+<label>Password<input id="lp" name="password" type="password" autocomplete="current-password" required></label>
+<div class="err" id="lerr" role="alert"></div>
+<button class="btn" type="submit" id="lbtn">Sign in</button>
+<a class="back" href="index.html">← Back to the shop</a>
+</form>
+</div>
+
+<div class="app" id="app" hidden>
+<aside class="side" id="side" aria-label="Admin menu">
+<div class="brand">MAISON TEMPO<small>Admin</small></div>
+<nav id="snav">
+<a href="#dashboard" data-v="dashboard"><svg viewBox="0 0 24 24"><path d="M3 3h8v10H3zM13 3h8v6h-8zM13 11h8v10h-8zM3 15h8v6H3z"/></svg>Dashboard</a>
+<a href="#orders" data-v="orders"><svg viewBox="0 0 24 24"><path d="M6 7h12l1 13H5z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>Orders<span class="pill" id="b-orders" hidden>0</span></a>
+<a href="#products" data-v="products"><svg viewBox="0 0 24 24"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>Products</a>
+<a href="#messages" data-v="messages"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H8l-4 4z"/></svg>Messages<span class="pill" id="b-msg" hidden>0</span></a>
+<a href="#subscribers" data-v="subscribers"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>Subscribers</a>
+<a href="#settings" data-v="settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>Settings</a>
+</nav>
+<div class="sfoot"><a href="index.html" target="_blank" rel="noopener">View shop ↗</a><button id="logout" type="button">Sign out</button></div>
+</aside>
+<div class="scrim" id="scrim"></div>
+<div class="main">
+<header class="top"><button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="side"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button><h1 id="vt">Dashboard</h1><span class="today" id="today"></span></header>
+<div id="banner"></div>
+<main id="view" tabindex="-1"></main>
+</div>
+</div>
+
+<div class="amodal" id="modal" hidden><div class="mbox" id="mbox" role="dialog" aria-modal="true" tabindex="-1"></div></div>
+<div id="toast" role="status"></div>
+<script src="data.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
